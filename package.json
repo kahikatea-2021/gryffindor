@@ -18,5 +18,10 @@
   "homepage": "https://github.com/kahikatea-2021/gryffindor#readme",
   "dependencies": {
     "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.9",
+    "tailwindcss": "^2.0.4"
   }
 }
