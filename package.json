@@ -4,7 +4,8 @@
   "description": "A daily spell generator where users can view existing spells and create new spells.  ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailbuild": "tailwindcss build ./src/styles.css -o main.css"
   },
   "repository": {
     "type": "git",
