@@ -17,16 +17,16 @@ function getSpellById(id, db = database) {
 
 function addNewSpell(newSpell, db = database) {
 	return db('spells')
-	  .insert({
-		  name: newSpell.name,
-		  description: newSpell.description,
-		  img: newSpell.img
-		//   id: newSpell.id
-	})
-	.then(result => {
-		console.log('result: ', result)
-		return db('spells')
-	})
+		.insert({
+			name: newSpell.name,
+			description: newSpell.description,
+			img: newSpell.img
+			//   id: newSpell.id
+		})
+		.then(result => {
+			console.log('result: ', result)
+			return db('spells')
+		})
 }
 
 function deleteSpell(id, db = database) {
