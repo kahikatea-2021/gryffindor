@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
 
-
+      colors: {
+        snitchGold: '#d4af37',
+        gryffRed: '#740001',
+      }
       
     },
   },
