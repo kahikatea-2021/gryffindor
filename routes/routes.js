@@ -5,6 +5,7 @@ const db = require('../utils/db')
 router.get('/', (req, res) => {
   return db.getAllSpells()
     .then(spells => {
+      console.log(spells);
       res.render('home', spells)
     })
     .catch(err => {
@@ -13,6 +14,10 @@ router.get('/', (req, res) => {
     .finally(() => {
       db.close()
     })
+})
+
+router.get('/newSpell', (req, res) => {
+  res.render('newSpell')
 })
 
 router.get('/getRandomSpell', (req, res) => {
@@ -32,7 +37,13 @@ router.get('/spell/:id', (req, res) => {
 })
 
 router.post('/addNewSpell', (req, res) => {
-  res.render('newSpell')
+  db.addNewSpell(req.body)
+    .then(() => {
+      res.send('Successfully added new spell!')
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
 })
 
 router.post('/delete/:id', (req, res) => {
