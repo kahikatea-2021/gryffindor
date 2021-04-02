@@ -5,7 +5,6 @@ const db = require('../utils/db')
 router.get('/', (req, res) => {
   return db.getAllSpells()
     .then(spells => {
-      console.log(spells);
       res.render('home', spells)
     })
     .catch(err => {
