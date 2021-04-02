@@ -1,13 +1,19 @@
 <link rel="stylesheet" href="/main.css">
 
-</center>
   <div class="font-serif: 'Georgia' text-yellow-400">
-    <h1>{{name}}</h1>
+      <center>
+
+    <h1><b>{{name}}</b></h1>
     <h2>{{description}}</h2>
     <img src="{{image}}">
+    <br>
+      <div class="font-serif: 'Georgia' text-black">
+
     <form>
         <input type="button" value="Go back!" onclick="history.back()">
     </form>
+<br>
+
     <form action="/delete/{{id}}" method="POST">
         <input type="submit" value="Delete">
     </form>
