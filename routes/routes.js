@@ -10,9 +10,6 @@ router.get('/', (req, res) => {
     .catch(err => {
       console.log(err)
     })
-    .finally(() => {
-      db.close()
-    })
 })
 
 router.get('/newSpell', (req, res) => {
