@@ -36,7 +36,7 @@ router.get('/spell/:id', (req, res) => {
 router.post('/addNewSpell', (req, res) => {
   db.addNewSpell(req.body)
     .then(() => {
-      res.send('Successfully added new spell!')
+      res.redirect("https://www.youtube.com/watch?v=X9dQLHF02ic")
     })
     .catch((err) => {
       res.status(500).send(err.message)
