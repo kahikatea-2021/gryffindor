@@ -1,21 +1,21 @@
 <link rel="stylesheet" href="/main.css">
 
-  <div class="font-serif: 'Georgia' text-yellow-400">
+  <div class="p-10 text-5xl font-serif: 'Georgia' text-yellow-400">
       <center>
 
-    <h1><b>{{name}}</b></h1>
+    <h1 class="p-10"><b>{{name}}</b></h1>
     <h2>{{description}}</h2>
-    <img src="{{image}}">
+    <img src="/images/spells/{{img}}" />
     <br>
       <div class="font-serif: 'Georgia' text-black">
 
     <form>
-        <input type="button" value="Go back!" onclick="history.back()">
+        <input class="rounded-md p-4 w-1/4 block mx-auto bg-gryffRed text-snitchGold text-xl font-bold" type="button" value="Go back!" onclick="history.back()">
     </form>
 <br>
 
     <form action="/delete/{{id}}" method="POST">
-        <input type="submit" value="Delete">
+        <input class="rounded-md p-4 w-1/4 block mx-auto bg-gryffRed text-snitchGold text-xl font-bold" type="submit" value="Delete">
     </form>
 </center>
 </div>
