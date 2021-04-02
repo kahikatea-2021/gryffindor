@@ -15,6 +15,11 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/getRandomSpell', (req, res) => {
+  const generatedId = db.getRandomId()
+  res.redirect(`/spell/${generatedId}`)
+})
+
 router.get('/spell/:id', (req, res) => {
   const id = Number(req.params.id)
   db.getSpellById(id)
