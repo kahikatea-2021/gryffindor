@@ -1,21 +1,22 @@
 <link rel="stylesheet" href="/main.css">
 
-  <div class="p-10 text-5xl font-serif: 'Georgia' text-yellow-400">
-      <center>
-
+<div class="p-10 text-5xl font-serif: 'Georgia' text-yellow-400">
+  <center>
+    <img class="rounded-full h-96 w-96" src="/images/spells/{{img}}">
     <h1 class="p-10"><b>{{name}}</b></h1>
     <h2>{{description}}</h2>
-    <img src="/images/spells/{{img}}" />
     <br>
-      <div class="font-serif: 'Georgia' text-black">
+    <div class="font-serif: 'New Tegomin'">
 
-    <form>
-        <input class="rounded-md p-4 w-1/4 block mx-auto bg-gryffRed text-snitchGold text-xl font-bold" type="button" value="Go back!" onclick="history.back()">
-    </form>
-<br>
+      <form>
+        <input class="rounded-md p-4 w-1/4 block mx-auto bg-gryffRed text-snitchGold text-xl font-bold" type="button"
+          value="Go back!" onclick="history.back()">
+      </form>
+      <br>
 
-    <form action="/delete/{{id}}" method="POST">
-        <input class="rounded-md p-4 w-1/4 block mx-auto bg-gryffRed text-snitchGold text-xl font-bold" type="submit" value="Delete">
-    </form>
-</center>
+      <form action="/delete/{{id}}" method="POST">
+        <input class="rounded-md p-4 w-1/4 block mx-auto bg-gryffRed text-snitchGold text-xl font-bold" type="submit"
+          value="Delete">
+      </form>
+  </center>
 </div>
